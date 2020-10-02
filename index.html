@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    /*여기는 메인*/
+    .logo {
+        text-align: center;
+    }
+    .logo img{
+        width: 10%;
+        text-align: center;
+    }
+    .main {
+        background-image: url("대왕암공원메인.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 500px;
+        text-align: center;
+        overflow: hidden;
+        transition: 1s;
+
+    }
+
+    .ulsan_ment{ 
+        position: relative;
+        margin-top: 10px;
+        z-index: 99;
+        left: 80%;
+        width: 20%
+    }
+
+    .menu {
+        position: relative;
+        display: flex;
+        width: 50%;
+        bottom: 510px;
+        text-align: center;
+        overflow: hidden;
+        font-family: 'Nanum Myeongjo', serif;
+    
+
+
+    }
+    a {
+        text-decoration: none;
+    }
+    li {
+        list-style: none;
+    }
+
+/**/
+    .first_menu {
+        padding-top: 10px;
+        width: 100%;
+        color: white;
+        font-size :20pt;
+        font-weight: 700;
+    }
+
+    .first_menu li {
+        margin-bottom: 12px;
+    }
+
+    .sub_menu a {
+        color: white;
+        position: relative;
+        bottom: 100px;
+        transition: 0.5s;
+        font-weight: 300;
+    }
+    .sub_menu {
+        padding: 0px;
+        font-size: 14pt;
+        position: relative;
+        overflow: hidden;
+        bottom: 13px;
+    }
+
+    .first_menu:hover .sub_menu a{
+        opacity: 1;        
+        position: relative;   
+        bottom: 0px; 
+    }
+
+    .here {
+        background-color: rgba(255, 255, 255, 0.466);
+        border-left: 1px solid white;
+    }
+
+/*슬라이드 공지사항*//*슬라이드 공지사항*//*슬라이드 공지사항*//*슬라이드 공지사항*//*슬라이드 공지사항*/
+    .slide_notice{
+        background-color: pink;
+        margin: 0px;
+        font-size: 15pt;
+    }
+
+    .slide_notice{height:40px;overflow:hidden;}
+    .slide_notice div{height:calc(100% * 4);animation:slide 15s infinite;}
+    .slide_notice li{height:calc(100% / 4); padding-top: 5px; padding-left: 10px; background-color:#254683; color: white;}
+    @keyframes slide {
+      0% {margin-top:0;}
+      10% {margin-top:0;}
+      25% {margin-top:-45px;}
+      35% {margin-top:-45px;}
+      50% {margin-top:-90px;}
+      60% {margin-top:-90px;}
+      75% {margin-top:-135px;}
+      85% {margin-top:-135px;}
+      100% {margin-top:0;}
+    }
+    .notice {
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+    }
+    
+    .static_notice {
+        font-size: 10pt;
+        text-align: center;
+        padding-top: 10px;
+        background-color: #254683; color: white;
+        font-weight: 500;
+    }
+    .static_notice i {
+        color: rgb(255, 230, 0);
+        font-size: 12pt;
+
+    }
+    /**//**//**//**//**//**//**//**//**//*이거는 아래에 공지사항, 둘레길*/
+    .bottom {
+        display: grid;
+        background-color: white;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+    .공지사항 , .대왕암둘레길 {
+       background:#eaf2ff;
+    }
+
+    .공지사항title {
+       color: #535fc3;
+       font-size: 15pt;
+       font-weight: 600;
+       margin-left: 10px; margin-top: 5px;
+    }
+    .공지사항content{
+        margin-left: 20px; margin-top: 5px;
+        font-size: 10pt;
+    }
+    .대왕암둘레길title {
+       color: #535fc3;
+       text-align: right;
+       font-size: 15pt;
+       font-weight: 600;
+       margin-right: 10px; margin-top: 5px;
+    }
+    .대왕암둘레길content {
+        margin-top: 10px;
+        text-align: center;
+    }
+    .대왕암둘레길grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-weight: 600;
+        font-size: 15pt;
+        margin-bottom: 10px;
+    }
+    .대왕암둘레길 img:hover {
+        opacity: 0.5;
+    }
+    .대왕암둘레길 .grid:hover .grid_name {
+        color:  #0059fd;
+    }
+
+    .bottom_white {
+        background-image: url("background.jpg");
+        background-size: cover;
+        position: absolute;
+        height: 800px;;
+        
+        width: 100%
+    }
+
+    .img_container { display: flex;}
+    .img_container img {
+        width: 280px;
+        transform: translate(-50%);
+        transition: 0.5s;
+        cursor: pointer;
+        transition: 0.5s;
+        display: flex;
+    }
+
+    .오토캠핑장 {
+        position: relative;
+        left: 150px;
+        top: 50px;
+    }
+
+    .오토캠핑장 img:hover, .울기등대 img:hover, .슬도 img:hover, .미르 img:hover {
+        width: 300px;
+    }
+
+    .울기등대 {
+        position: relative;
+        left: 100px;
+        top: 230px;
+    }
+
+    .슬도 {
+        position: relative;
+        left: 100px; top: 350px;
+    }
+
+    .미르 {
+        position: relative;
+        left: 100px; top: 450px;
+    }
+
+    .시설안내 {
+        z-index: 999;
+        position: absolute;
+        left: 600px;
+        margin-top: 50px;
+    }
+
+    .주변관광지grid {
+        position: absolute; left: 88%; margin-top: 40px;
+        border :solid 1px rgb(126, 126, 160);
+        z-index: 1000;
+        display: grid;
+        text-align: center;
+        padding: 10px;
+        
+    }
+
+    .주변관광지grid img {
+        width: 120px;
+    }
+
+    .주변관광지title {
+        font-size: 15pt;
+        padding: 10px;
+        background-color: #eaf2ff;
+        margin-bottom: 10px;
+        color:cornflowerblue;
+        font-weight: 600;
+    }
+
+    .주변관광지_name {
+        margin-bottom: 10px;}
+
+    .ulsan_logo {
+        position: absolute;
+        margin-top: 700px;
+        width: 200px;
+        left: 30px;
+    }
+
+
+    
+
+
+</style>
+
+<body>
+    <div class="logo"><img src="대왕암공원로고.png"> </div>
+
+    <div class="main">
+
+    
+    <div class="ulsan_ment"><img src="ment.png"></div>
+
+    <div class="menu">
+
+        <li class="first_menu"><div class="here">공원소개</div>
+        <ul class="sub_menu">
+            <li><a href="#">인사말씀</a></li>
+            <li><a href="#">공원소개</a></li>
+            <li><a href="#">오시는길</a></li>
+        </ul></li>
+        <li class="first_menu"><div class="here">둘레길안내</div>
+            <ul class="sub_menu">
+                <li><a href="#">바닷가길</a></li>
+                <li><a href="#">전설바위길</a></li>
+                <li><a href="#">송림길</a></li>
+            </ul></li>
+        
+        <li class="first_menu"><div class="here">시설안내</div>
+            <ul class="sub_menu">
+                <li><a href="#">대왕암오토캠핑장</a></li>
+                <li><a href="#">울기등대</a></li>
+                <li><a href="#">미르놀이터</a></li>
+             </ul></li>
+
+         <li class="first_menu"><div class="here">커뮤니티</div>
+             <ul class="sub_menu">
+                 <li><a href="#">공지사항(개발X)</a></li>
+                 <li><a href="#">자주하는질문</a></li>
+                 <li><a href="#">사진후기</a></li>
+             </ul></li>
+    </div></div>
+    
+    <div class="notice">
+        <div class="static_notice">알려드립니다 <i class="fas fa-exclamation-circle"></i></div>
+    <div class="slide_notice">
+          <div>
+          <li>코로나19로 인한 방역 수칙에 관한 공지사항</li>
+          <li>비상상황 발생시 국민행동 요령에 대한 공지사항</li>
+          <li>운전면허 따야하는데 언제 따야 하는지 모르겠다 한번에 붙을 수 있을까</li>
+          <li>실기도 남았는데 자스도 해야하구 흑흑 취업언제하니</li>
+        </div>
+      </div></div>
+
+    <div class="bottom">
+    <div class="공지사항">
+        <div class="공지사항title">공지사항 +</div>
+        <div class="공지사항content">
+            실제로는 어떻게 공지사항을 등록하는지 사실 몰라요 위에서 직접 코딩하는지 백엔드로 하는지<br>
+            회사나 학원을 가야 알려주겠죠 만약 직접 위로 코딩한다고 해도 저는 받아들이겠습니다<br>
+            제가 뭐 백엔드를 열심히 배웠으면 검색이라두 해서 찾아봤을건데...백엔드는 아니야<br>
+            풀스텍이 저의 가장 거창한 목표이긴하지만 현재는 프론트엔드만으로도 벅찹니다<br>
+            그렇다고 프론트엔드를 잘한다? 아니다....아직 시작한지 두달안된 초짜...아기<br>
+            자스는 열심히 공부하고 있지만 아직 너무 어렵네요 회사가면 익숙해지겠죠 <br>
+        </div>
+    </div>
+    <div class="대왕암둘레길">
+        <div class="대왕암둘레길title">대왕암둘레길</div>
+        <div class="대왕암둘레길content">
+            <div class="대왕암둘레길grid">
+            <div class="grid"><img src="자산 10@2x.png">
+                <div class="grid_name">바닷가길</div></div>
+            <div class="grid"><img src="자산 11@2x.png">
+                <div class="grid_name">전설바위길</div></div>
+            <div class="grid"><img src="자산 12@2x.png">
+                <div class="grid_name">송림길</div></div>
+            </div>
+            
+
+        </div>
+    </div>
+    </div>
+    <div class="bottom_white">
+     <div class="img_container">
+        <div class="오토캠핑장"><img src="오토캠핑장.png"></div>
+        <div class="울기등대"><img src="울기등대.png"></div>
+        <div class="슬도"><img src="슬도.png"></div>
+        <div class="미르"><img src="미르.png"></div>
+     </div></div>
+     <img src="시설안내.png" class="시설안내">
+
+     <div class="주변관광지grid">
+         <div class="주변관광지title">주변관광지</div>
+         <div class="주변관광지img_grid"><img src="전망대.jpg">
+            <div class="주변관광지_name">전망대</div></div>
+        <div class="주변관광지img_grid"><img src="몽돌.jpg">
+            <div class="주변관광지_name">울산몽돌해변</div></div>
+        <div class="주변관광지img_grid"><img src="일산.jpg">
+            <div class="주변관광지_name">일산해변</div></div>
+        </div>
+        <img src="로고.png" class="ulsan_logo">
+
+    </body>
+    <script>
+        //Array of images which you want to show: Use path you want.
+        var images=new Array('대왕암공원메인.jpg','대왕암공원메인.jpg','슬도1.jpg','송림길.jpg');
+        var nextimage=0;
+        doSlideshow();
+        
+        function doSlideshow(){
+            if(nextimage>=images.length){nextimage=0;}
+            $('.main')
+            .css('background-image','url("'+images[nextimage++]+'")')
+            .fadeIn(700,function(){
+                setTimeout(doSlideshow,3500);
+            });
+            
+        }
+        </script>
+
+
+</body>
+</html>
